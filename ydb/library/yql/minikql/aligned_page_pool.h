@@ -296,4 +296,6 @@ void* GetAlignedPage(ui64 size);
 template<typename TMmap = TSystemMmap>
 void ReleaseAlignedPage(void* mem, ui64 size);
 
+void PrintGlobalPoolArrowStats();
+
 } // NKikimr

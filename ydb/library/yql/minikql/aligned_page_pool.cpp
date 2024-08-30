@@ -611,6 +611,12 @@ void ReleaseAlignedPage(void* mem, ui64 size) {
     }
 }
 
+void PrintGlobalPoolArrowStats() {
+    for (ui32 level = 0; level <= MidLevels; ++level) {
+        Cerr << "Level: " << level << ", size: " << TGlobalPools<TSystemMmap, true>::Instance().Get(level).GetSize() << "\n";
+    }
+}
+
 template void* GetAlignedPage<>(ui64);
 template void* GetAlignedPage<TFakeAlignedMmap>(ui64);
 template void* GetAlignedPage<TFakeUnalignedMmap>(ui64);

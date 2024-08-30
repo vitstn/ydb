@@ -1,6 +1,7 @@
 
 RECURSE(
     alloc
+    arrow_alloc
     block_groupby
     mprefetch
     mt_param
